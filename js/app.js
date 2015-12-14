@@ -252,7 +252,7 @@
     var $reference = $('#reference'), $list = $reference.find('ul'), $fields = $('.inputs > div').not('#reference');
     $reference.append($("<div><div></div></div>").addClass('throbber'));
 
-   $.ajax( { url: config.api_url + "/" } ).done( function( response ) {
+   $.ajax( { url: config.api_url + "/", dataType: "json" } ).done( function( response ) {
 
       var auth = wpApiAuth({
         oauth_consumer_key: config.client_key,
